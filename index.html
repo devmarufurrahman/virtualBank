@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Virtual Bank</title>
+
+		<!-- Favicon  -->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+		<!-- google font link  -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Serif:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet" />
+
+		<!-- css style link  -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- navigation start here  -->
+		<nav>
+			<p class="welcome">Log in to get started</p>
+			<img src="./images/logo.png" alt="Virtual Bank Logo" class="logo" />
+			<form class="login">
+				<input
+					type="text"
+					placeholder="Username"
+					class="loginInput loginInputUsername" />
+				<input
+					type="password"
+					placeholder="Password"
+					class="loginInput loginInputPassword" />
+
+				<button class="loginBtn">Log in &rarr;</button>
+			</form>
+		</nav>
+		<!-- navigation ends here  -->
+
+		<!-- main body starts here  -->
+		<main class="app">
+			<!-- Balance  -->
+			<div class="balance">
+				<div>
+					<p class="balanceLabel">Current Balance</p>
+					<p class="balanceDate">As of <span class="date">15/03/2023</span></p>
+					<p class="balanceValue">1000$</p>
+				</div>
+			</div>
+			<!-- Movements  starts-->
+			<div class="movements">
+				<div class="movementsRow">
+					<div class="app movementTypeDeposit">5 Deposit</div>
+					<div class="movementsDate">5 Days ago</div>
+					<div class="movementValue">1000$</div>
+				</div>
+				<div class="movementsRow">
+					<div class="movementType movementTypeWithdrawal">5 Withdrawals</div>
+					<div class="movementsDate">13/09/2023</div>
+					<div class="movementValue">1000$</div>
+				</div>
+			</div>
+
+			<!-- Movements ends  -->
+
+			<!-- Summary starts  -->
+			<div class="summary">
+				<p class="summaryLabel">In</p>
+				<p class="summaryValue summaryValueIn">1000$</p>
+				<p class="summaryLabel">Out</p>
+				<p class="summaryValue summaryValueOut">1000$</p>
+				<p class="summaryLabel">Interest</p>
+				<p class="summaryValue summaryValueInterest">1000$</p>
+				<button class="btnSort">Sort &downarrow;</button>
+			</div>
+			<!-- Summary ends -->
+
+			<!-- Transfer starts  -->
+			<div class="operation operationTransfer">
+				<h2>Transfer Money</h2>
+				<form class="form formTransfer">
+					<input type="text" class="formInput formInputTo" />
+					<input type="number" class="formInput formInputAmount" />
+
+					<button class="formBtn formBtnTransfer">&rarr;</button>
+					<label for="formInputTo" class="formLabel">Transfer to</label>
+					<label for="formInputAmmount" class="formLabel">Amount</label>
+				</form>
+			</div>
+			<!-- Transfer ends  -->
+
+			<!-- Loan starts  -->
+			<div class="operation operationLoan">
+				<h2>Request loan</h2>
+				<form class="form formLoan">
+					<input type="number" class="formInput formLoanAmount" />
+
+					<button class="formBtn formBtnLoan">&rarr;</button>
+					<label for="formLoanAmount" class="formLabel formLabelLoan"
+						>Amount</label
+					>
+				</form>
+			</div>
+			<!-- Loan ends  -->
+
+			<!-- Close starts  -->
+			<div class="operation operationClose">
+				<h2>Close Account</h2>
+				<form class="form formClose">
+					<input type="text" class="formInput formInputUsername" />
+					<input type="password" class="formInput formInputPassword" />
+
+					<button class="formBtn formBtnClose">&rarr;</button>
+					<label class="formLabel">Confirm Username</label>
+					<label class="formLabel">Confirm Password</label>
+				</form>
+			</div>
+			<!-- Close ends  -->
+
+			<!-- Logout section start -->
+			<p class="logoutTimer">
+				You will be logged out in <span class="timer">02:00</span>
+			</p>
+			<!-- Logout section end -->
+		</main>
+		<!-- main body ends here  -->
+
+		<!-- footer section start  -->
+		<footer>
+			&copy; <span class="copyWriteYear">2023</span>,
+			<strong>Virtual Bank</strong> by Md. Marufur Rahman. All right reserved.
+		</footer>
+		<!-- footer section end  -->
+
+		<!-- javascript link  -->
+		<script src="script.js"></script>
+	</body>
+</html>

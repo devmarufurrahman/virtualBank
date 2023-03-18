@@ -1,0 +1,280 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	color: #444;
+	background-color: #f3f3f3;
+	height: 100vh;
+	padding: 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+.welcome {
+	font-size: 2rem;
+	font-weight: 500;
+}
+.logo {
+	height: 5rem;
+}
+.login {
+	display: flex;
+}
+.loginInput {
+	padding: 0.5rem 2rem;
+	font-size: 1.6rem;
+	font-family: inherit;
+	text-align: center;
+	width: 15rem;
+	border-radius: 10rem;
+	margin-right: 1rem;
+	color: inherit;
+	border: 1px solid #fff;
+	transition: all 0.3s;
+}
+
+.loginInput:focus {
+	border-color: #ccc;
+}
+.loginInput::placeholder {
+	color: #bbb;
+}
+.loginBtn {
+	background: none;
+	font-size: 2rem;
+	color: inherit;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.loginBtn:focus,
+.loginBtn:hover,
+.btnSort:focus,
+.btnSort:hover {
+	color: #777;
+}
+
+.app {
+	position: relative;
+	max-width: 90rem;
+	margin: 4rem auto;
+	display: grid;
+	grid-template-columns: 4fr 3fr;
+	grid-template-rows: auto repeat(3, 15rem) auto;
+	gap: 2rem;
+
+	/* login animation  */
+	opacity: 0;
+	transition: all 1s;
+}
+.balance {
+	grid-column: 1 / span 2;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+.balanceLabel {
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: -0.2rem;
+}
+.balanceDate {
+	font-size: 1.4rem;
+	border-color: #888;
+}
+
+.balanceValue {
+	font-size: 4.5rem;
+	font-weight: 400;
+}
+
+.movements {
+	grid-row: 2 / span 3;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+
+.movementsRow {
+	padding: 2.25rem 4rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+.movementType {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #fff;
+	padding: 0.1rem 1rem;
+	border-radius: 10rem;
+	margin-right: 2rem;
+}
+
+.movementsDate {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #666;
+}
+
+.movementTypeDeposit {
+	background-color: #00b79f;
+}
+
+.movementTypeWithdrawal {
+	background-color: #f3442a;
+}
+
+.movementValue {
+	font-size: 1.7rem;
+	margin-left: auto;
+}
+
+.summary {
+	grid-row: 5/6;
+	display: flex;
+	align-items: baseline;
+	padding: 0 0.3rem;
+	margin-top: 1rem;
+}
+
+.summaryLabel {
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-right: 0.8rem;
+}
+
+.summaryValue {
+	font-size: 2.2rem;
+	margin-right: 2.5rem;
+}
+
+.summaryValueIn,
+.summaryValueInterest {
+	color: #00b79f;
+}
+
+.summaryValueOut {
+	color: #f3442a;
+}
+
+.btnSort {
+	margin-left: auto;
+	background: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-family: inherit;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.operation {
+	border-radius: 1rem;
+	padding: 3rem 4rem;
+	color: #333;
+}
+
+.operationTransfer {
+	background-color: #00b79f;
+}
+
+.operationLoan {
+	background-color: #f3442a;
+}
+
+.operationClose {
+	background-color: #fdb850;
+}
+
+h2 {
+	margin-bottom: 1.5rem;
+	font-size: 1.7rem;
+	font-weight: 600;
+	color: #333;
+}
+
+.form {
+	display: grid;
+	grid-template-columns: 2.5fr 2.5fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 0.4rem 1rem;
+}
+
+.form.formLoan {
+	grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+
+.formLabelLoan {
+	grid-row: 2;
+}
+
+.formInput {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-family: inherit;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #333;
+	padding: 0.3rem 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.3s;
+}
+
+.formInput:focus {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.formLabel {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.formBtn {
+	border-radius: 0.5rem;
+	font-size: 1.8rem;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.formBtn:focus {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.logoutTimer {
+	padding: 0 0.3rem;
+	margin-top: 2rem;
+	text-align: right;
+	font-size: 1.3rem;
+}
+
+.timer {
+	font-weight: 600;
+}
+
+footer {
+	text-align: center;
+	font-size: 1.3rem;
+	color: #888;
+	padding-top: 3rem;
+}
