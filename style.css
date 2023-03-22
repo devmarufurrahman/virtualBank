@@ -1,20 +1,17 @@
-/* font-family: 'Lato', sans-serif;
-font-family: 'Noto Serif', serif;
-font-family: 'Roboto', sans-serif; */
-
 * {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	outline: 0;
+	outline: none;
+	border: none;
 	box-sizing: border-box;
 }
+
 html {
 	font-size: 62.5%;
 }
 
 body {
-	font-family: "Lato", sans-serif;
+	font-family: "Poppins", sans-serif;
 	color: #444;
 	background-color: #f3f3f3;
 	height: 100vh;
@@ -27,17 +24,21 @@ nav {
 	align-items: center;
 	padding: 0 2rem;
 }
+
 .welcome {
 	font-size: 2rem;
 	font-weight: 500;
 }
+
 .logo {
 	height: 5rem;
 }
+
 .login {
 	display: flex;
 }
-.loginInput {
+
+.login-input {
 	padding: 0.5rem 2rem;
 	font-size: 1.6rem;
 	font-family: inherit;
@@ -50,13 +51,15 @@ nav {
 	transition: all 0.3s;
 }
 
-.loginInput:focus {
+.login-input:focus {
 	border-color: #ccc;
 }
-.loginInput::placeholder {
+
+.login-input::placeholder {
 	color: #bbb;
 }
-.loginBtn {
+
+.login-btn {
 	background: none;
 	font-size: 2rem;
 	color: inherit;
@@ -64,26 +67,27 @@ nav {
 	transition: all 0.3s;
 }
 
-.loginBtn:focus,
-.loginBtn:hover,
-.btnSort:focus,
-.btnSort:hover {
+.login-btn:hover,
+.login-btn:focus,
+.btn-sort:focus,
+.btn-sort:hover {
 	color: #777;
 }
 
 .app {
 	position: relative;
-	max-width: 90rem;
+	max-width: 100rem;
 	margin: 4rem auto;
 	display: grid;
 	grid-template-columns: 4fr 3fr;
 	grid-template-rows: auto repeat(3, 15rem) auto;
 	gap: 2rem;
 
-	/* login animation  */
+	/* Login animation */
 	opacity: 0;
-	transition: all 1s;
+	transition: all 0.3s;
 }
+
 .balance {
 	grid-column: 1 / span 2;
 	display: flex;
@@ -91,17 +95,19 @@ nav {
 	justify-content: space-between;
 	margin-bottom: 2rem;
 }
-.balanceLabel {
+
+.balance-label {
 	font-size: 2rem;
 	font-weight: 500;
 	margin-bottom: -0.2rem;
 }
-.balanceDate {
+
+.balance-date {
 	font-size: 1.4rem;
-	border-color: #888;
+	color: #888;
 }
 
-.balanceValue {
+.balance-value {
 	font-size: 4.5rem;
 	font-weight: 400;
 }
@@ -112,14 +118,14 @@ nav {
 	overflow-y: scroll;
 }
 
-.movementsRow {
+.movements-row {
 	padding: 2.25rem 4rem;
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid #eee;
 }
 
-.movementType {
+.movements-type {
 	font-size: 1.1rem;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -129,22 +135,22 @@ nav {
 	margin-right: 2rem;
 }
 
-.movementsDate {
+.movements-date {
 	font-size: 1.1rem;
 	text-transform: uppercase;
 	font-weight: 500;
 	color: #666;
 }
 
-.movementTypeDeposit {
+.movements-type-deposit {
 	background-color: #00b79f;
 }
 
-.movementTypeWithdrawal {
+.movements-type-withdrawal {
 	background-color: #f3442a;
 }
 
-.movementValue {
+.movements-value {
 	font-size: 1.7rem;
 	margin-left: auto;
 }
@@ -157,28 +163,28 @@ nav {
 	margin-top: 1rem;
 }
 
-.summaryLabel {
+.summary-label {
 	font-size: 1.2rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-right: 0.8rem;
 }
 
-.summaryValue {
+.summary-value {
 	font-size: 2.2rem;
 	margin-right: 2.5rem;
 }
 
-.summaryValueIn,
-.summaryValueInterest {
+.summary-value-in,
+.summary-value-interest {
 	color: #00b79f;
 }
 
-.summaryValueOut {
+.summary-value-out {
 	color: #f3442a;
 }
 
-.btnSort {
+.btn-sort {
 	margin-left: auto;
 	background: none;
 	font-size: 1.2rem;
@@ -194,15 +200,15 @@ nav {
 	color: #333;
 }
 
-.operationTransfer {
+.operation-transfer {
 	background-color: #00b79f;
 }
 
-.operationLoan {
+.operation-loan {
 	background-color: #f3442a;
 }
 
-.operationClose {
+.operation-close {
 	background-color: #fdb850;
 }
 
@@ -220,15 +226,15 @@ h2 {
 	gap: 0.4rem 1rem;
 }
 
-.form.formLoan {
+.form.form-loan {
 	grid-template-columns: 2.5fr 1fr 2.5fr;
 }
 
-.formLabelLoan {
+.form-label-loan {
 	grid-row: 2;
 }
 
-.formInput {
+.form-input {
 	width: 100%;
 	background-color: rgba(255, 255, 255, 0.3);
 	font-family: inherit;
@@ -240,16 +246,16 @@ h2 {
 	transition: all 0.3s;
 }
 
-.formInput:focus {
+.form-input:focus {
 	background-color: rgba(255, 255, 255, 0.6);
 }
 
-.formLabel {
+.form-label {
 	font-size: 1.2rem;
 	text-align: center;
 }
 
-.formBtn {
+.form-btn {
 	border-radius: 0.5rem;
 	font-size: 1.8rem;
 	background-color: #fff;
@@ -257,11 +263,11 @@ h2 {
 	transition: all 0.3s;
 }
 
-.formBtn:focus {
+.form-btn:focus {
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-.logoutTimer {
+.logout-timer {
 	padding: 0 0.3rem;
 	margin-top: 2rem;
 	text-align: right;
