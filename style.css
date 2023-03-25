@@ -177,7 +177,7 @@ nav {
 
 .summary-value-in,
 .summary-value-interest {
-	color: #00b79f;
+	color: #00b749;
 }
 
 .summary-value-out {
@@ -201,15 +201,15 @@ nav {
 }
 
 .operation-transfer {
-	background-color: #00b79f;
+	background-color: #1436d0;
 }
 
 .operation-loan {
-	background-color: #f3442a;
+	background-color: #d2f32a;
 }
 
 .operation-close {
-	background-color: #fdb850;
+	background-color: #fd5050;
 }
 
 h2 {
